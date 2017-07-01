@@ -1,0 +1,9 @@
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase #/Name_of_site(directory)/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /Name_of_site(directory)/index.php [L]
+</IfModule>
